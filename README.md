@@ -11,6 +11,12 @@ The site serves as a fictional portfolio and landing page for **Elya the Bosmer*
 - **Automated Carousel:** Features an image slider powered by vanilla JavaScript and CSS transitions.
 - **Performance Optimized:** Uses `.webp` format for high-quality, lightweight image assets.
 
+## 📝 Code Documentation
+All source files are documented with concise inline comments in English:
+- **`index.html`** — Each section (header, nav, hero, about, services, gallery, profile, footer) is labeled with HTML comments explaining its purpose and structure.
+- **`assets/style.css`** — Stylesheet blocks are grouped and annotated, covering layout, typography, components, and responsive breakpoints.
+- **`assets/script.js`** — Each script block (dynamic year, hamburger toggle, carousel) is prefixed with a section header and inline comments describing the logic.
+
 ## 🛠️ Tech Stack
 - **HTML5**
 - **CSS3**

@@ -1,4 +1,6 @@
-
+/* ===================================
+   CSS Custom Properties (Design Tokens)
+   =================================== */
 :root {
   --primary-color: #2b2f26;
   --second-color: #666b5e;
@@ -8,6 +10,9 @@
   --heading-color: #c0cfbc;
 }
 
+/* ===================================
+   Reset & Base Styles
+   =================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,8 +20,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem;
+  scroll-behavior: smooth;       /* smooth anchor scrolling */
+  scroll-padding-top: 4.5rem;    /* offset for fixed header */
 }
 
 body {
@@ -36,6 +41,10 @@ h3 {
   color: var(--heading-color);
 }
 
+/* ===================================
+   Section Heading Decorations
+   =================================== */
+/* centered heading with horizontal lines on both sides */
 .hlines {
   text-align: center;
   position: relative;
@@ -61,6 +70,9 @@ h3 {
   margin-right: 0;
 }
 
+/* ===================================
+   Inline Links
+   =================================== */
 p a {
   color: var(--text-color);
   text-decoration: none;
@@ -81,6 +93,9 @@ p a:active {
   font-style: italic;
 }
 
+/* ===================================
+   Footer
+   =================================== */
 footer {
   padding: 20px;
   background-color: var(--third-color);
@@ -88,6 +103,9 @@ footer {
   font-weight: 700;
 }
 
+/* ===================================
+   Navigation Bar
+   =================================== */
 header.nav_container {
   width: 100%;
   margin: 0 auto;
@@ -135,6 +153,7 @@ nav li {
   gap: 4rem;
 }
 
+/* hamburger toggle hidden on desktop */
 .nav_toggle {
   display: none;
   background: none;
@@ -142,6 +161,10 @@ nav li {
   cursor: pointer;
 }
 
+/* ===================================
+   Hero Section
+   =================================== */
+/* full-viewport background with gradient overlay */
 .hero {
   width: 100%;
   height: 100vh;
@@ -159,6 +182,7 @@ nav li {
   position: relative;
 }
 
+/* centered hero text with fade-in animation */
 .hero_content {
   position: absolute;
   top: 50%;
@@ -182,6 +206,9 @@ nav li {
   line-height: 1.5;
 }
 
+/* ===================================
+   Content Sections
+   =================================== */
 #content {
   font-size: 1.1rem;
   text-align: justify;
@@ -203,6 +230,7 @@ nav li {
   margin-bottom: 20px;
 }
 
+/* blockquote styling with left accent border */
 #content article blockquote {
   font-style: italic;
   color: var(--primary-color);
@@ -232,6 +260,9 @@ nav li {
   color: var(--second-color);
 }
 
+/* ===================================
+   Services Skill Cards
+   =================================== */
 .skill_boxes {
   display: flex;
   gap: 15px;
@@ -240,6 +271,7 @@ nav li {
   margin: 20px 0;
 }
 
+/* individual service card with themed SVG background */
 .info_box {
   flex: 1 1 250px;
   max-width: 300px;
@@ -268,6 +300,7 @@ nav li {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* unique SVG background per service card */
 .info_box.box1 {
   background-image: url("./image/bg1.svg");
   background-repeat: no-repeat;
@@ -289,6 +322,9 @@ nav li {
   background-position: right bottom;
 }
 
+/* ===================================
+   Carousel (Radio-Button CSS Slider)
+   =================================== */
 .carousel {
   position: relative;
   width: 100%;
@@ -299,10 +335,12 @@ nav li {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* hide the radio inputs, use labels for interaction */
 .carousel input {
   display: none;
 }
 
+/* slides flex container: shifts via transform */
 .slides {
   display: flex;
   transition: transform 0.5s ease;
@@ -321,6 +359,7 @@ nav li {
   display: block;
 }
 
+/* caption overlay at bottom of each slide */
 .caption {
   position: absolute;
   bottom: 30px;
@@ -333,6 +372,7 @@ nav li {
   z-index: 2;
 }
 
+/* bottom navigation dot container */
 .navigation_manual {
   position: absolute;
   width: 100%;
@@ -357,6 +397,7 @@ nav li {
   background: var(--fourth-color);
 }
 
+/* radio-button-driven slide transitions */
 #slide1:checked ~ .slides {
   transform: translateX(0%);
 }
@@ -373,6 +414,9 @@ nav li {
   transform: translateX(-300%);
 }
 
+/* ===================================
+   Profile Card (aside)
+   =================================== */
 aside {
   max-width: 900px;
   margin: 0 auto 40px;
@@ -393,6 +437,7 @@ aside {
   color: var(--heading-color);
 }
 
+/* flex layout: image left, text right */
 .profile_container {
   display: flex;
   gap: 20px;
@@ -437,6 +482,9 @@ aside {
   margin: 15px 0;
 }
 
+/* ===================================
+   Entrance Animations
+   =================================== */
 #about,
 #services,
 #gallery {
@@ -447,7 +495,7 @@ aside {
   animation: fadeIn 3s ease forwards;
 }
 
-/* Anim */
+/* fade in from transparent */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -457,6 +505,7 @@ aside {
   }
 }
 
+/* drop in from above */
 @keyframes dropIn {
   from {
     transform: translateY(-100px);
@@ -468,17 +517,22 @@ aside {
   }
 }
 
-/* Responsive */
+/* ===================================
+   Responsive: Tablet & Mobile (≤768px)
+   =================================== */
 @media screen and (max-width: 768px) {
+  /* smaller decorative lines on headings */
   .hlines::before,
   .hlines::after {
     width: 50px;
   }
 
+  /* reduce nav padding */
   header.nav_container {
     padding: 0 1rem;
   }
 
+  /* mobile nav: dropdown panel hidden by default */
   .nav_menu_list {
     position: absolute;
     top: 3.5rem;
@@ -502,6 +556,7 @@ aside {
     color: var(--second-color);
   }
 
+  /* logo area spans full width to push toggle right */
   .nav_logo {
     display: flex;
     width: 100%;
@@ -509,6 +564,7 @@ aside {
     margin: 0;
   }
 
+  /* show_nav class toggled by JS: reveals dropdown */
   .nav_menu_list.show_nav {
     max-height: 500px;
     opacity: 1;
@@ -516,10 +572,12 @@ aside {
     pointer-events: auto;
   }
 
+  /* show hamburger toggle on mobile */
   .nav_toggle {
     display: block;
   }
 
+  /* smaller hero on mobile */
   .hero {
     height: 70vh;
   }
@@ -532,6 +590,7 @@ aside {
     font-size: 1rem;
   }
 
+  /* stack skill cards vertically */
   .skill_boxes {
     flex-direction: column;
     align-items: center;
@@ -546,6 +605,7 @@ aside {
     font-size: 1.1rem;
   }
 
+  /* smaller carousel images */
   .slide img {
     height: 250px;
   }
@@ -555,6 +615,7 @@ aside {
     padding: 8px;
   }
 
+  /* stack profile content vertically */
   .profile-container {
     flex-direction: column;
     align-items: center;
@@ -574,7 +635,66 @@ aside {
     width: 100%;
   }
 
-  .profile section p {
-    font-size: 14px;
+   .profile section p {
+     font-size: 14px;
+   }
+}
+
+/* ===================================
+    Back to Top Button
+    =================================== */
+.back_to_top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background-color: var(--third-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back_to_top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back_to_top:hover {
+  transform: translateY(-5px);
+  background-color: var(--second-color);
+}
+
+.back_to_top svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary-color);
+  transition: stroke 0.3s ease;
+}
+
+.back_to_top:hover svg {
+  stroke: var(--text-color);
+}
+
+/* Mobile responsive back to top */
+@media screen and (max-width: 768px) {
+  .back_to_top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .back_to_top svg {
+    width: 20px;
+    height: 20px;
   }
 }

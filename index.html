@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- head -->
+  <!-- head: meta tags, fonts, stylesheet, favicon -->
   <head>
     <meta charset="UTF-8" />
     <title>Elya Forge - Master Crafter of Skyrim</title>
     <meta name="description" content="Elya Forge menyediakan layanan penempaan pedang, armor, pembuatan potion (alkimia), dan enchanting terbaik di seluruh Skyrim dan Tamriel." />
-    <!-- fonts -->
+    <!-- fonts: Google Fonts (Quicksand) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <!-- css -->
+    <!-- css: main stylesheet -->
     <link rel="stylesheet" href="assets/style.css" />
+    <!-- favicon: browser tab icon -->
     <link
       rel="shortcut icon"
       href="assets/image/icon.png"
@@ -20,14 +21,16 @@
   </head>
   <!-- body -->
   <body>
-    <!-- header -->
+    <!-- header: navigation bar -->
     <header class="nav_container" id="home">
-      <!-- navbar -->
+      <!-- navbar: logo + hamburger toggle + menu links -->
       <nav class="nav">
         <div class="nav_logo">
+          <!-- logo link back to top -->
           <a href="#home" class="logo">
             <img src="assets/image/logo.svg" alt="ElyaForge" />
           </a>
+          <!-- hamburger button for mobile nav toggle -->
           <button
             class="nav_toggle"
             id="nav_toggle"
@@ -51,7 +54,7 @@
             </svg>
           </button>
         </div>
-        <!-- navbar menu list-->
+        <!-- navbar menu list: nav links -->
         <ul class="nav_menu_list">
           <li class="nav_menu_item"><a href="#about">About</a></li>
           <li class="nav_menu_item"><a href="#services">Services</a></li>
@@ -60,9 +63,9 @@
         </ul>
       </nav>
     </header>
-    <!-- main -->
+    <!-- main content -->
     <main>
-      <!-- hero section -->
+      <!-- hero section: full-screen welcome banner -->
       <section class="hero">
         <div class="hero_content">
           <h1>Well Met, Travellers!</h1>
@@ -72,9 +75,9 @@
           </p>
         </div>
       </section>
-      <!-- content -->
+      <!-- content wrapper -->
       <div id="content">
-        <!-- about -->
+        <!-- about section: introduction to Elya Forge -->
         <article id="about">
           <h2 class="hlines">Welcome to Elya Forge</h2>
           <p>
@@ -117,7 +120,7 @@
             >, Falkreath Hold.
           </p>
         </article>
-        <!-- services -->
+        <!-- services section: forging, alchemy, enchanting -->
         <article id="services">
           <h2 class="hlines">Elya Forge Services</h2>
           <p>
@@ -138,6 +141,7 @@
             >
             sacred art.
           </p>
+          <!-- skill cards: three service categories -->
           <section class="skill_boxes">
             <article class="info_box box1">
               <h3>Forging</h3>
@@ -166,12 +170,13 @@
             </article>
           </section>
         </article>
-        <!-- gallery -->
+        <!-- gallery section: image carousel -->
         <article id="gallery">
           <h2 class="hlines">Gallery</h2>
           <section aria-label="Gallery Carousel">
-            <!-- carousel -->
+            <!-- carousel: radio-button-driven CSS slider -->
             <div class="carousel">
+              <!-- hidden radio inputs for slide selection -->
               <input
                 type="radio"
                 name="slider"
@@ -197,6 +202,7 @@
                 id="slide4"
                 aria-label="Show slide 4: Enchanting"
               />
+              <!-- slides container with four images -->
               <div class="slides">
                 <figure class="slide">
                   <img src="assets/image/slide0.webp" alt="Lakeview Manor" />
@@ -221,6 +227,7 @@
                   </figcaption>
                 </figure>
               </div>
+              <!-- manual navigation dots -->
               <div class="navigation_manual" aria-label="Carousel navigation">
                 <label
                   for="slide1"
@@ -246,7 +253,7 @@
             </div>
           </section>
         </article>
-        <!-- aside -->
+        <!-- aside: profile card -->
         <aside>
           <article id="profile" class="profile card">
             <h2 class="hlines">Elya the Bosmer</h2>
@@ -286,12 +293,19 @@
         </aside>
       </div>
     </main>
-    <!-- footer -->
+    <!-- footer: copyright -->
     <footer>
-      <p>Elya Forge &#169; 2025</p>
+      <p>Elya Forge &#169; <span id="year"></span></p>
       <p>Submission Belajar Dasar Pemrograman Web</p>
     </footer>
+    <!-- back to top button -->
+    <button class="back_to_top" id="backToTop" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12l7-7 7 7"/>
+        <path d="M12 5v14"/>
+      </svg>
+    </button>
     <!-- javascript -->
     <script src="assets/script.js"></script>
-  </body>
+</body>
 </html>
